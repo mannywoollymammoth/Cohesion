@@ -1,0 +1,311 @@
+{
+	"info": {
+		"_postman_id": "1ac8aaec-f755-4577-9ad9-68aa2bb82af7",
+		"name": "Cohesion API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "accept terms and conditions",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "MannyIsaGoodEmployee",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "CohesionIsCool",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/api/InvitationCode/acceptTerms",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"InvitationCode",
+						"acceptTerms"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get InvitationCode",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "CohesionIsCool",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "MannyIsaGoodEmployee",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/api/InvitationCode",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"InvitationCode"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "put Device",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "CohesionIsCool",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "MannyIsaGoodEmployee",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/api/InvitationCode?code=4701020660288948441&deviceID=1231251243214",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"InvitationCode"
+					],
+					"query": [
+						{
+							"key": "code",
+							"value": "4701020660288948441"
+						},
+						{
+							"key": "deviceID",
+							"value": "1231251243214"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get DeviceList",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "CohesionIsCool",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "MannyIsaGoodEmployee",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/api/Device",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Device"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "accept terms and conditions 2",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "EatsChicagoHotdogswithKetchup",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "OtherLessFunnyCandidate",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/api/InvitationCode/acceptTerms",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"InvitationCode",
+						"acceptTerms"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get InvitationCode 2",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "EatsChicagoHotdogswithKetchup",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "OtherLessFunnyCandidate",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/api/InvitationCode",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"InvitationCode"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "put Device 2",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "OtherLessFunnyCandidate",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "EatsChicagoHotdogswithKetchup",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/api/InvitationCode?code=4478286622314415192&deviceID=1231251243214",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"InvitationCode"
+					],
+					"query": [
+						{
+							"key": "code",
+							"value": "4478286622314415192"
+						},
+						{
+							"key": "deviceID",
+							"value": "1231251243214"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get DeviceList 2",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "EatsChicagoHotdogswithKetchup",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "OtherLessFunnyCandidate",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/api/Device",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Device"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
