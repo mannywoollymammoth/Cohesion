@@ -1,4 +1,4 @@
-﻿using CohesionIB.ApiEngineer.CodeChallenge.DAL;
+using CohesionIB.ApiEngineer.CodeChallenge.DAL;
 using CohesionIB.ApiEngineer.CodeChallenge.Models;
 using CohesionIB.ApiEngineer.CodeChallenge.Services;
 using Microsoft.AspNetCore.Authorization;

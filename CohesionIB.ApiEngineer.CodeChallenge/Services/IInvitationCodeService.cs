@@ -29,7 +29,6 @@ namespace CohesionIB.ApiEngineer.CodeChallenge.Services
                     var bytes = entropyService.Take(8).ToList();
                     return BitConverter.ToUInt64(bytes.ToArray());
                 }
-
                 return null;
             });
         }
