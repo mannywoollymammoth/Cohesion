@@ -1,0 +1,29 @@
+Thanks for taking the time to review my work yall. 
+So here are some details about my program. 
+
+PREFACE
+I created a DAL (data access layer)
+and a business layer in the services folder
+the DAL is my attempt at trying to simulate a database. 
+I have a very primitive save function and a function to create a data object similar to how one would use DB Context.
+There is a file called users.json that is where i store the user data. 
+Please note I did store passwords in clear text but I didnt have time to set up 
+a encryption framework to encrypt the data. Ideally I would just let a third party auth framework handle the authentication portion of any program.
+if you want to add another user object just the username and password fields are needed. the program should 
+be robust enough to add the other fields even if they are left blank. Object #1 is what the data should look like once all 4 api are ran.
+Also I created a appsettings.json to store the api key.
+Finally I believe i fixed the problem with the program not running on windows. My theory is that enumerables don't like to be counted and 
+instead i used the .Any() function to verify if there was any object in the enumerable.
+
+RUNNING program
+once you run this program you will want to follow the happy path of execution 
+you should have been provided with a postman collection that will contain several example requests.
+NOTE in the authorization field it shuld be set to basic authentication and have the username and password listed in there. 
+if not you will have to copy and paste the username and passwords from the users.json file into that auth field in postman for it to work.
+
+order should go as follows. (if the order isnt followed then the program will return the required error codes defined in the document)
+1) accept terms and conditions
+2) get invitationcode (you will need to pass it into the next function so copy and paste)
+3) put Device. here you will grab the invitation code and then add a random integer 
+    example - https://localhost:5001/api/InvitationCode?code=8356819979051426038&deviceID=1234512423123
+4) get device list. This will just return the device list for the users.
