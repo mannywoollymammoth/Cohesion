@@ -40,7 +40,7 @@ namespace CohesionIB.ApiEngineer.CodeChallenge.Handlers
 
             User user = null;
             try
-            {                
+            {
                 var authHeader = AuthenticationHeaderValue.Parse(Request.Headers["Authorization"]);
                 var credentialBytes = Convert.FromBase64String(authHeader.Parameter);
                 var credentials = Encoding.UTF8.GetString(credentialBytes).Split(new[] { ':' }, 2);
@@ -54,7 +54,7 @@ namespace CohesionIB.ApiEngineer.CodeChallenge.Handlers
             if (user == null)
                 return AuthenticateResult.Fail("Invalid Username or Password");
 
-            var claims = new[] 
+            var claims = new[]
             {
                 new Claim(ClaimTypes.Name, user.UserName),
             };
@@ -65,5 +65,7 @@ namespace CohesionIB.ApiEngineer.CodeChallenge.Handlers
 
             return AuthenticateResult.Success(ticket);
         }
+
+
     }
 }

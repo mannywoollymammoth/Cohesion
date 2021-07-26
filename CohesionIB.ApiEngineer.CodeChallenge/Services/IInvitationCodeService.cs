@@ -11,7 +11,11 @@ namespace CohesionIB.ApiEngineer.CodeChallenge.Services
         bool HasCode { get; }
         ulong Code { get; }
     }
-
+    /// <summary>
+    /// here i noteced that the issue was that enumerables cant be counted efficiently.
+    /// im not 100% certain why this is. but if we want a faster way to just check 
+    /// if the enumerable isn't empty then we can use the .any() function.
+    /// </summary>
     public class InvitationCodeService : IInvitationCodeService
     {
         private readonly Lazy<ulong?> _code;
@@ -20,12 +24,11 @@ namespace CohesionIB.ApiEngineer.CodeChallenge.Services
         {
             _code = new Lazy<ulong?>(() =>
             {
-                if (entropyService.Count() > 0)
+                if (entropyService.Any())
                 {
                     var bytes = entropyService.Take(8).ToList();
                     return BitConverter.ToUInt64(bytes.ToArray());
                 }
-                
                 return null;
             });
         }

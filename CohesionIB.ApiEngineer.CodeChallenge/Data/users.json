@@ -1,0 +1,18 @@
+{
+  "users": [
+    {
+      "UserName": "MannyIsaGoodEmployee",
+      "Password": "CohesionIsCool",
+      "TermsAndConditions": true,
+      "InvitationCode": 4907130817435090592,
+      "DeviceID": [
+        1231251243213,
+        1231251243214
+      ]
+    },
+    {
+      "UserName": "OtherLessFunnyCandidate",
+      "Password": "EatsChicagoHotdogswithKetchup"
+    }
+  ]
+}

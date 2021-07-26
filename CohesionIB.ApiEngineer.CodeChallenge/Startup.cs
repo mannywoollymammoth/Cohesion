@@ -1,7 +1,9 @@
-﻿using CohesionIB.ApiEngineer.CodeChallenge.Handlers;
+using CohesionIB.ApiEngineer.CodeChallenge.DAL;
+using CohesionIB.ApiEngineer.CodeChallenge.Handlers;
 using CohesionIB.ApiEngineer.CodeChallenge.Services;
 using Lot.O.Invitation.Codes.Services;
 using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -33,11 +35,13 @@ namespace CohesionIB.ApiEngineer.CodeChallenge
             services.AddControllers();
 
             services.AddAuthentication("Basic")
-                .AddScheme<AuthenticationSchemeOptions, BasicAuthenticationHandler>("Basic", null);                      
+                .AddScheme<AuthenticationSchemeOptions, BasicAuthenticationHandler>("Basic", null);
 
-            services.AddSingleton<IUserService, UserService>();
             services.AddScoped<IInvitationCodeService, InvitationCodeService>();
-            services.SetupLotOInvitationCodes("I♥Cohesion!!1!");
+            services.AddScoped<IDataAccessLayer, DataAccessLayer>();
+            services.AddScoped<IDataHandler, DataHandler>();
+            services.AddSingleton<IUserService, UserService>();
+            services.SetupLotOInvitationCodes(Configuration["APIKey"]);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
