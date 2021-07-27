@@ -1,0 +1,4 @@
+Answers to the Written Questions.
+1) The codes are only returning sometimes on linux because there was a flag that would oscillate between true and false. this means that when the invitation code gets sent out the flag would go back to false. Then when the user would try again the codes would not be sent.
+2) the codes were never returning on windows because there was an issue in the Invitation Code service. Particularly in the piece for the entroy service. entropyService.Count() can be problematic. should be switched to .any()
+3)QA would probably experience that issue if they accepted the terms and conditions in a different user account but never requested the code. Then if they tried using a second user account the flag would still be set for the terms and conditions. thus it would work without the second user accepting them.
